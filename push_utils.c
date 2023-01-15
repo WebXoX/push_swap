@@ -37,25 +37,80 @@ t_list * pab(t_list *source, t_list *distance)
     return (tmp);
 }
 
+t_list * rab(t_list *first)
+{
+    t_list * tmp;
 
+    tmp = first;
+    first= first->next;
+    ft_lstadd_back(&first,tmp);
+    return (first);
+}
+
+void rr(t_list **a, t_list **b)
+{
+    *a=rab(*a); 
+    *b=rab(*b); 
+}
+t_list * rrab(t_list *first)
+{
+    t_list * tmp;
+
+    tmp = ft_lstlast(first);
+    first= first;
+    ft_lstadd_front(&first,tmp);
+    return (first);
+}
+
+void rrr(t_list **a, t_list **b)
+{
+    *a=rab(*a); 
+    *b=rab(*b); 
+}
 int main ()
 {
     t_list a;
-    a.content =1;
-    a.next = NULL;
-
     t_list b;
+     t_list c;  
+     t_list a2;
+    t_list b2;
+     t_list c2;
+    a.content =1;
+    a.next = &b;
+
     b.content= 2;
 
-    b.next = NULL;
+    b.next = &c;
+    c.content= 3;
+
+    c.next = NULL;
+     a2.content =1;
+    a2.next = &b2;
+
+    b2.content= 2;
+
+    b2.next = &c2;
+    c2.content= 3;
+
+    c2.next = NULL;
 
     t_list *af;
     t_list *as;
 
     af = &a;
-    as = &b;
-as = pab(af,as);
-printf("%d",as->content);
+    as = &a2;
+// af = rab(af);
+while(af != NULL)
+{
+    rrab(af);
+    // af = ft_lstlast(af);
+
+printf("%d\n",af->content);
+// printf("%d\n",as->content);
+
+af= af->next;
+// as= as->next;
+}
 }
 
 
