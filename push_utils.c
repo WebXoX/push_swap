@@ -1,24 +1,29 @@
 #include "push_swap.h"
 # include <stdio.h>
 
-void sab(t_list *ab)
+int sab(t_list *ab)
 {
     t_list *index2;
     int temp;
-
+    if(ab == NULL)
+        return (1);
     index2 =  (ab->next);
     if(index2 != NULL)
     {
         temp = ab->content;
         ab->content = index2->content;
         index2->content = temp;
+        return (0);
     }
+    return (1);
 }
 
 void ss(t_list *a, t_list *b)
 {
-    sab(a);
-    sab(b);
+    if(sab(a)== 1)
+        write(1,"failed",6);
+    if(sab(b) == 1)
+        write(1,"failed",6);
 }
 
 t_list * pab(t_list *source, t_list *distance)
