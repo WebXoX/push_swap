@@ -67,130 +67,130 @@ void rrr(t_list **a, t_list **b)
     *a=rab(*a); 
     *b=rab(*b); 
 }
-int main ()
-{
-    t_list a;
-    t_list b;
-     t_list c;  
-     t_list a2;
-    t_list b2;
-     t_list c2;
-    a.content =1;
-    a.next = &b;
-
-    b.content= 2;
-
-    b.next = &c;
-    c.content= 3;
-
-    c.next = NULL;
-     a2.content =1;
-    a2.next = &b2;
-
-    b2.content= 2;
-
-    b2.next = &c2;
-    c2.content= 3;
-
-    c2.next = NULL;
-
-    t_list *af;
-    t_list *as;
-
-    af = &a;
-    as = &a2;
-// af = rab(af);
-while(af != NULL)
-{
-    rrab(af);
-    // af = ft_lstlast(af);
-
-printf("%d\n",af->content);
-// printf("%d\n",as->content);
-
-af= af->next;
-// as= as->next;
-}
-}
-
-
-
-
 // int main ()
 // {
-//     // t_list **a;
-//     t_list  b;
-//     t_list  c;
+//     t_list a;
+//     t_list b;
+//      t_list c;  
+//      t_list a2;
+//     t_list b2;
+//      t_list c2;
+//     a.content =1;
+//     a.next = &b;
 
-//     c.index=0;
-//     c.content =1;
-//     c.next = &b;
-// b.index=1;
-// b.next = 0;
-//     b.content =2;
+//     b.content= 2;
 
-//     // **a = *c;
-//     printf("%d: %d \n",c.index,c.content);
-//     printf("%d: %d \n",b.index,b.content);
-//     sa(&c);
-//     printf("%d: %d \n",c.index,c.content);
-//     printf("%d: %d \n",b.index,b.content);
-// }
+//     b.next = &c;
+//     c.content= 3;
 
-// t_list push_stack(int index, int content )
+//     c.next = NULL;
+//      a2.content =1;
+//     a2.next = &b2;
+
+//     b2.content= 2;
+
+//     b2.next = &c2;
+//     c2.content= 3;
+
+//     c2.next = NULL;
+
+//     t_list *af;
+//     t_list *as;
+
+//     af = &a;
+//     as = &a2;
+// // af = rab(af);
+// while(af != NULL)
 // {
-//     t_list new;
-//     // t_list *newp = NULL;
+//     rrab(af);
+//     // af = ft_lstlast(af);
 
+// printf("%d\n",af->content);
+// // printf("%d\n",as->content);
 
-//     new.index = index;
-//     new.content = content;
-//     new.next= NULL;
-//     return (new);
+// af= af->next;
+// // as= as->next;
+// }
 // }
 
-// void prit( t_list *m)
-// {
-//     int j=0;
-//     while (j <5)
-//         {
-//             printf("%d: %d \n",m->index,m->content);
-//             m =  m->next;
-//             j++;
-//         }
-// }
-// int main ()
-// {
-//      t_list a ;
-//      t_list TMP;
-//      t_list *m ;
-//      t_list *n;
-
-//      int j = 0;
-//      a = (push_stack(j,j));
-//      a.next = &a;
-//      m = &a;
-//      n = m;
-//      j = 1;
-//     //  TMP =push_stack(1,1);
-//     //  m->next = &TMP;
-
-//         while (j <5)
-//         {
-//             TMP =push_stack(j,j);
-//             m->next = &TMP;
-//             // printf("%d: %d \n",m->index,m->content);
-//             m =  m->next;
-//             j++;
-//         }
-//          while (j <5)
-//         {
-//             printf("%d: %d \n",n->index,n->content);
-//             n =  n->next;
-//             j++;
-//         }
-//         prit(n);
-//         // printf("%d: %d \n",m->next->index,m->content);
 
 
-// }
+
+// // int main ()
+// // {
+// //     // t_list **a;
+// //     t_list  b;
+// //     t_list  c;
+
+// //     c.index=0;
+// //     c.content =1;
+// //     c.next = &b;
+// // b.index=1;
+// // b.next = 0;
+// //     b.content =2;
+
+// //     // **a = *c;
+// //     printf("%d: %d \n",c.index,c.content);
+// //     printf("%d: %d \n",b.index,b.content);
+// //     sa(&c);
+// //     printf("%d: %d \n",c.index,c.content);
+// //     printf("%d: %d \n",b.index,b.content);
+// // }
+
+// // t_list push_stack(int index, int content )
+// // {
+// //     t_list new;
+// //     // t_list *newp = NULL;
+
+
+// //     new.index = index;
+// //     new.content = content;
+// //     new.next= NULL;
+// //     return (new);
+// // }
+
+// // void prit( t_list *m)
+// // {
+// //     int j=0;
+// //     while (j <5)
+// //         {
+// //             printf("%d: %d \n",m->index,m->content);
+// //             m =  m->next;
+// //             j++;
+// //         }
+// // }
+// // int main ()
+// // {
+// //      t_list a ;
+// //      t_list TMP;
+// //      t_list *m ;
+// //      t_list *n;
+
+// //      int j = 0;
+// //      a = (push_stack(j,j));
+// //      a.next = &a;
+// //      m = &a;
+// //      n = m;
+// //      j = 1;
+// //     //  TMP =push_stack(1,1);
+// //     //  m->next = &TMP;
+
+// //         while (j <5)
+// //         {
+// //             TMP =push_stack(j,j);
+// //             m->next = &TMP;
+// //             // printf("%d: %d \n",m->index,m->content);
+// //             m =  m->next;
+// //             j++;
+// //         }
+// //          while (j <5)
+// //         {
+// //             printf("%d: %d \n",n->index,n->content);
+// //             n =  n->next;
+// //             j++;
+// //         }
+// //         prit(n);
+// //         // printf("%d: %d \n",m->next->index,m->content);
+
+
+// // }
