@@ -40,9 +40,23 @@ t_list * split(char *argc)
     // printf("\n");
     return first;
 }
-void algorithm(t_list **a, t_list **b)
+void algorithm(t_list *a, t_list *b)
 {
+    int i;
+    t_list *tmpa;
+    t_list *tmpb;
 
+    // tmpa = *a;
+    // tmpb = *b;
+    i = ft_lstsize(a);
+    while(i>0){
+    if (a->content > a->next->content)
+        pab(&a,&b);
+
+    printf("%d\n",a->content);
+    // printf("%d\n",b->content);
+    i--;
+    }
 }
 int main( int argv, char *argc[])
 {
@@ -72,7 +86,7 @@ int main( int argv, char *argc[])
             }
             i++;
         }
-        algorithm(&a,&b);
+        algorithm(a,b);
 // t_list *t = ft_lstlast(first);
 //  while(first != NULL)
 // {

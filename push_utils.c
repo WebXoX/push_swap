@@ -26,15 +26,14 @@ void ss(t_list *a, t_list *b)
         write(1,"failed",6);
 }
 
-t_list * pab(t_list *source, t_list *distance)
+void pab(t_list **source, t_list **distance)
 {
-    t_list * tmp;
-    t_list * tmp1;
+    t_list *tmp;
 
-    tmp = source;
-    tmp1= source->next;
-    tmp->next = distance;
-    return (tmp);
+    tmp = *source;
+    *source = tmp->next;
+    tmp->next = NULL;
+    ft_lstadd_front(distance,tmp);
 }
 
 t_list * rab(t_list *first)

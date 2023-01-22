@@ -30,6 +30,19 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 int	ft_atoi(const char *nptr);
 void	freed(char **a);
 size_t	ft_strlen(const char *s);
+int sab(t_list *ab);
+void ss(t_list *a, t_list *b);
+void pab(t_list **source, t_list **distance);
+t_list * rab(t_list *first);
+void rr(t_list **a, t_list **b);
+t_list * rrab(t_list *first);
+void rrr(t_list **a, t_list **b);
+
+
+
+
+
+
 
 
 #endif
