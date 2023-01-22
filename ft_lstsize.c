@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jperinch <jperinch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 12:42:36 by jperinch          #+#    #+#             */
-/*   Updated: 2022/07/26 11:44:40 by jperinch         ###   ########.fr       */
+/*   Created: 2022/07/23 12:40:12 by jperinch          #+#    #+#             */
+/*   Updated: 2022/07/26 11:47:33 by jperinch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	t_list	*temp;
+	int		i;
 
-	while (lst!=NULL)
+	i = 0;
+	while (lst != NULL)
 	{
 		temp = lst->next;
-		if (temp == NULL)
-			break ;
+		i++;
 		lst = temp;
 	}
-	return (lst);
+	return (i);
 }
